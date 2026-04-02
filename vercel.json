@@ -1,0 +1,20 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "devCommand": "next dev --turbopack",
+  "installCommand": "npm install",
+  "functions": {
+    "src/app/api/markets/predict/route.ts": {
+      "maxDuration": 300
+    },
+    "src/app/api/markets/chat/route.ts": {
+      "maxDuration": 120
+    },
+    "src/app/api/markets/bars/route.ts": {
+      "maxDuration": 30
+    },
+    "src/app/api/markets/data/route.ts": {
+      "maxDuration": 30
+    }
+  }
+}
