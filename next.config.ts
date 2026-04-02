@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // Next.js 16: Turbopack is the default bundler.
+  // Adding an empty turbopack config tells Next.js that the webpack config
+  // below is intentional (used only when --webpack flag is passed explicitly)
+  // and prevents the build from erroring with "webpack config but no turbopack config".
+  turbopack: {},
+
   // Allow images from common financial data sources
   images: {
     remotePatterns: [
