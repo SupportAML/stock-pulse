@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 import type { OHLCV, TechnicalAnalysis } from '@/lib/markets/types';
 
 // lightweight-charts must be imported dynamically (DOM-only library)
