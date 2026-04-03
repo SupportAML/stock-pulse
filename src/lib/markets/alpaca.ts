@@ -22,8 +22,8 @@ export async function alpacaFetch(
   const url = `${baseUrl}${endpoint}`;
 
   const headers: HeadersInit = {
-    "APCA-API-KEY-ID": process.env.ALPACA_API_KEY || "",
-    "APCA-API-SECRET-KEY": process.env.ALPACA_SECRET_KEY || "",
+    "APCA-API-KEY-ID": process.env.ALPACA_KEY || process.env.ALPACA_API_KEY || "",
+    "APCA-API-SECRET-KEY": process.env.ALPACA_SECRET || process.env.ALPACA_SECRET_KEY || "",
     "Content-Type": "application/json",
     ...options?.headers,
   };
