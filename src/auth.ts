@@ -14,11 +14,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
 
   callbacks: {
-    // Optional allow-list: set ALLOWED_EMAILS=a@b.com,c@d.com in .env.local
-    signIn({ user }) {
-      const allowed = process.env.ALLOWED_EMAILS;
-      if (!allowed) return true;
-      return allowed.split(",").map(e => e.trim()).includes(user.email ?? "");
+    // Allow any Google account to sign in
+    signIn() {
+      return true;
     },
 
     // Persist user id in the JWT so we can read it later
